@@ -9,17 +9,32 @@ public class ClasseTeste {
 		ler = new Scanner(System.in);
 		
 		String palavra;
-		int i;
+		int qtd, num=0, numtotal=0;
+		float avg;
 		
 		
 		System.out.println("Escreva uma frase:");
 		palavra = ler.nextLine();
 		
-		System.out.println("Escreva um numero:");
-		i = ler.nextInt();
+		System.out.printf("%s\n", palavra);
 		
 		
-		System.out.printf("%s %d\n", palavra, i);
+		
+		System.out.println("Escreva a quantidade de entradas:");
+		qtd = ler.nextInt();
+		
+		for(int i = 0; i < qtd ; i++) {
+			System.out.printf("Digite o numero %d: \n", i+1);
+			num = ler.nextInt();
+			numtotal = numtotal + num;
+		}
+		
+		avg = numtotal/qtd;
+		
+		System.out.printf("A media é: %f", avg);
+		
+		
+		
 	}
 
 }
