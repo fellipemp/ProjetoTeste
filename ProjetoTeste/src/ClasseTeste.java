@@ -1,10 +1,13 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.Scanner;
 
 public class ClasseTeste {
 
 	private static Scanner ler;
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException {
 		
 		ler = new Scanner(System.in);
 		
@@ -34,6 +37,10 @@ public class ClasseTeste {
 		System.out.println("A media é: " + avg);
 		
 		
+		
+		String arquivo = new Scanner(new FileReader("arqteste.txt")).useDelimiter("\\Z").next();
+		
+		System.out.println(arquivo);
 		
 	}
 
