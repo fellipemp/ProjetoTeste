@@ -16,7 +16,7 @@ public class ClasseTeste {
 		System.out.println("Escreva uma frase:");
 		palavra = ler.nextLine();
 		
-		System.out.printf("%s\n", palavra);
+		System.out.println(palavra);
 		
 		
 		
@@ -24,14 +24,14 @@ public class ClasseTeste {
 		qtd = ler.nextInt();
 		
 		for(int i = 0; i < qtd ; i++) {
-			System.out.printf("Digite o numero %d: \n", i+1);
+			System.out.println("Digite o numero " + (i+1) + ": ");
 			num = ler.nextInt();
 			numtotal = numtotal + num;
 		}
 		
 		avg = numtotal/qtd;
 		
-		System.out.printf("A media é: %f", avg);
+		System.out.println("A media é: " + avg);
 		
 		
 		
