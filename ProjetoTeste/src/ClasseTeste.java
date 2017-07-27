@@ -42,6 +42,17 @@ public class ClasseTeste {
 		
 		System.out.println(arquivo);
 		
+		
+		// Executando programa externo
+		
+		String externo = "cmd /c D:/Users/fmarp/Documents/lista.txt";
+		
+		try {
+			Runtime.getRuntime().exec(externo);
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 }
