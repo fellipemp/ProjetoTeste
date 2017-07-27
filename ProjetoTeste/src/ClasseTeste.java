@@ -53,6 +53,16 @@ public class ClasseTeste {
 			e.printStackTrace();
 		}
 		
+		String externo1 = "cmd /d start lista.txt";
+		
+		try {
+			Runtime r = Runtime.getRuntime();
+			r.exec(externo1);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
 	}
 
 }
