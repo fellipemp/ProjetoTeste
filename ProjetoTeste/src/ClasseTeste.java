@@ -53,7 +53,7 @@ public class ClasseTeste {
 			e.printStackTrace();
 		}
 		
-		String externo1 = "cmd /d start lista.txt";
+		String externo1 = "cmd /c start notepad++.exe";
 		
 		try {
 			Runtime r = Runtime.getRuntime();
