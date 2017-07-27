@@ -1,17 +1,23 @@
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
+
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
 public class ClasseTeste {
 
 	private static Scanner ler;
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws IOException {
 		
 		ler = new Scanner(System.in);
 		
-		String palavra;
+	/*	String palavra;
 		int qtd, num=0, numtotal=0;
 		float avg;
 		
@@ -61,6 +67,26 @@ public class ClasseTeste {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		*/
+		
+		String arquivoNome = "D:/Users/fmarp/Documents/hora.txt";
+		
+		// CRIANDO O ARQUIVO PARA ESCRITA
+		FileWriter arq = new FileWriter(arquivoNome);
+		PrintWriter gravarArq = new PrintWriter(arq);
+		
+		// PREPARANDO HORARIO
+		DateTime dataFinal = new DateTime();
+		DateTimeFormatter dtfPadrao = DateTimeFormat.forPattern("dd/MM/yyyy HH:mm:ss");
+		
+		System.out.println(dataFinal.toString(dtfPadrao));
+		
+		gravarArq.printf(dataFinal.toString(dtfPadrao)+"\n");
+		
+		arq.close();
+		
+		// PROGRAMA CRIANDO NOVO ARQUIVO COM A HORA DA EXECUÇÃO. TENTAR APENAS ACRESCENTAR AS NOVAS HORAS,
+		// AO INVÉS DE CRIAR UM NOVO ARQUIVO
 		
 		
 	}
