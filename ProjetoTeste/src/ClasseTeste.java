@@ -70,25 +70,29 @@ public class ClasseTeste {
 		*/
 		
 		String arquivoNome = "D:/Users/fmarp/Documents/hora.txt";
-		
-		// CRIANDO O ARQUIVO PARA ESCRITA
-		FileWriter arq = new FileWriter(arquivoNome);
-		PrintWriter gravarArq = new PrintWriter(arq);
-		
+			
 		// PREPARANDO HORARIO
 		DateTime dataFinal = new DateTime();
 		DateTimeFormatter dtfPadrao = DateTimeFormat.forPattern("dd/MM/yyyy HH:mm:ss");
 		
 		System.out.println(dataFinal.toString(dtfPadrao));
 		
+		// CRIANDO O ARQUIVO PARA ESCRITA
+		FileWriter arq = new FileWriter(arquivoNome);
+		PrintWriter gravarArq = new PrintWriter(arq);
 		gravarArq.printf(dataFinal.toString(dtfPadrao)+"\n");
-		
 		arq.close();
 		
+		
+		// ManipularArquivo.editor(arquivoNome, dataFinal.toString(dtfPadrao));
+		
+		
+		Runtime r = Runtime.getRuntime();
+		r.exec("cmd /c " + arquivoNome);
+		
+		
 		// PROGRAMA CRIANDO NOVO ARQUIVO COM A HORA DA EXECUÇÃO. TENTAR APENAS ACRESCENTAR AS NOVAS HORAS,
-		// AO INVÉS DE CRIAR UM NOVO ARQUIVO
-		
-		
+		// AO INVÉS DE CRIAR UM NOVO ARQUIVO		
 	}
 
 }
